@@ -2,7 +2,7 @@
 
 这是一个测试项目，可能会有不可预测的事情发生（比如：毁损数据、烧毁硬件等等），请**谨慎使用**。
 
-[English](README_EN.md "English")
+[English](README_en.md "English")
 
 感谢 @haydibe 提供 RedPill Tool Chain
 
@@ -53,6 +53,8 @@
 - 安装 thethorgroup.boot-wait : `./redpill_tool_chain.sh add https://github.com/jumkey/redpill-load/raw/develop/redpill-boot-wait/rpext-index.json`
 - 安装 pocopico.mpt3sas       : `./redpill_tool_chain.sh add https://raw.githubusercontent.com/pocopico/rp-ext/master/mpt3sas/rpext-index.json`
 - 移除 pocopico.mpt3sas       : `./redpill_tool_chain.sh del pocopico.mpt3sas`
+- 安装 jumkey.dtb             : `./redpill_tool_chain.sh add https://github.com/jumkey/redpill-load/raw/develop/redpill-dtb/rpext-index.json`
+- 移除 jumkey.dtb             : `./redpill_tool_chain.sh del jumkey.dtb`
 
 [获取更多扩展驱动...](https://github.com/pocopico/rp-ext)
 
@@ -111,6 +113,9 @@ bromolow-7.0.1-42218
 apollolake-6.2.4-25556
 apollolake-7.0-41890
 apollolake-7.0.1-42218
+broadwell-7.0.1-42218
+broadwellnk-7.0.1-42218
+geminilake-7.0.1-42218
 
 Custom Extensions:
 ---------------------
@@ -118,3 +123,9 @@ pocopico.mpt3sas
 thethorgroup.boot-wait
 thethorgroup.virtio
 ```
+
+## 更多细节
+
+编译`geminilake`需要加入`jumkey.dtb`扩展并参考[这里](https://github.com/jumkey/redpill-load/blob/develop/redpill-dtb/README.md)创建设备的二进制设备树
+
+查看基于[test.yml](https://github.com/tossp/redpill-tool-chain/blob/master/.github/workflows/test.yml)的使用[示例](https://github.com/tossp/redpill-tool-chain/actions/workflows/test.yml)
